@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("j2Character", j2Character);
 
       // Redireccionar a la pantalla de pelea
-      window.location.href = "game.html"; // Asegúrate de que esta sea la ruta correcta al archivo de pelea
+      window.location.href = "../game.html"; // Asegúrate de que esta sea la ruta correcta al archivo de pelea
     }
   });
 

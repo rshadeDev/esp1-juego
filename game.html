@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Taller 2 - Juego</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
 
   <body>
@@ -92,7 +92,17 @@
 
       <button id="start-battle-btn" class="hidden">Empezar Pelea</button>
 
-      <script src="js/main.js"></script>
+      <script src="/js/main.js"></script>
+      
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          gameMusic.play(); // Iniciar música automáticamente
+        });
+
+        document.getElementById("backToSelectionBtn").addEventListener("click", () => {
+          window.location.href = "index.html";
+        });
+    </script>
     </section>
   </body>
 </html>
