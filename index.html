@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taller 2 - Juego</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+
+  <body>
+    <section class="hero-section">
+      <h1 class="title">Mortal Kumbiat</h1>
+      <h2 class="title">Seleccion de personaje</h2>
+      <div class="card-container">
+        <div class="card">
+          <a href="#">
+            <div
+              class="card-background"
+              style="background-image: url(images/liukang.png)"
+            ></div>
+            <div class="content">
+              <div class="card-name">Liu Kang</div>
+              <h3 class="card-description">
+                Shaolin monk who fights to protect Earthrealm in Mortal Kombat.
+              </h3>
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="#">
+            <div
+              class="card-background"
+              style="background-image: url(images/sub-zero.jpg)"
+            ></div>
+            <div class="content">
+              <div class="card-name">Sub Zero</div>
+              <h3 class="card-description">
+                Ice-powered ninja from the Lin Kuei, master of cryomancy.
+              </h3>
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="#">
+            <div
+              class="card-background"
+              style="background-image: url(images/sektor.jpeg)"
+            ></div>
+            <div class="content">
+              <div class="card-name">Sektor</div>
+              <h3 class="card-description">
+                Cyborg ninja assassin from the Lin Kuei clan, uses technology.
+              </h3>
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="#">
+            <div
+              class="card-background"
+              style="background-image: url(images/scorpion.png)"
+            ></div>
+            <div class="content">
+              <div class="card-name">Scorpion</div>
+              <h3 class="card-description">
+                Undead ninja seeking revenge after being killed by Sub-Zero.
+              </h3>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="stats-container">
+        <div id="j1-stats" class="stats">
+          <h3>Jugador 1 (J1)</h3>
+          <p id="j1-name">Personaje:</p>
+          <p id="j1-hp">HP:</p>
+          <p id="j1-damage">Damage:</p>
+          <p id="j1-attack-speed">AS:</p>
+          <p id="j1-speed">Velocidad:</p>
+          <p id="j1-attack-range">Rango de ataque:</p>
+        </div>
+
+        <div id="j2-stats" class="stats">
+          <h3>Jugador 2 (J2)</h3>
+          <p id="j2-name">Personaje:</p>
+          <p id="j2-hp">HP:</p>
+          <p id="j2-damage">Damage:</p>
+          <p id="j2-attack-speed">AS:</p>
+          <p id="j2-speed">Velocidad:</p>
+          <p id="j2-attack-range">Rango de ataque:</p>
+        </div>
+      </div>
+
+      <button id="start-battle-btn" class="hidden">Empezar Pelea</button>
+
+      <script src="/js/main.js"></script>
+    </section>
+  </body>
+</html>
