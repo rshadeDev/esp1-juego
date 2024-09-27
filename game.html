@@ -1,98 +1,56 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Taller 2 - Juego</title>
+    <title>Pelea de Personajes</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
+  <body class="game-body">
+    <div class="game-container">
 
-  <body>
-    <section class="hero-section">
-      <h1 class="title">Selecciona 2 Personajes</h1>
-      <div class="card-container">
-        <div class="card">
-          <a href="#">
-            <div
-              class="card-background"
-              style="background-image: url(images/liukang.png)"
-            ></div>
-            <div class="content">
-              <div class="card-name">Liu Kang</div>
-              <h3 class="card-description">
-                Shaolin monk who fights to protect Earthrealm in Mortal Kombat.
-              </h3>
-            </div>
-          </a>
-        </div>
-        <div class="card">
-          <a href="#">
-            <div
-              class="card-background"
-              style="background-image: url(images/sub-zero.jpg)"
-            ></div>
-            <div class="content">
-              <div class="card-name">Sub Zero</div>
-              <h3 class="card-description">
-                Ice-powered ninja from the Lin Kuei, master of cryomancy.
-              </h3>
-            </div>
-          </a>
-        </div>
-        <div class="card">
-          <a href="#">
-            <div
-              class="card-background"
-              style="background-image: url(images/sektor.jpeg)"
-            ></div>
-            <div class="content">
-              <div class="card-name">Sektor</div>
-              <h3 class="card-description">
-                Cyborg ninja assassin from the Lin Kuei clan, uses technology.
-              </h3>
-            </div>
-          </a>
-        </div>
-        <div class="card">
-          <a href="#">
-            <div
-              class="card-background"
-              style="background-image: url(images/scorpion.png)"
-            ></div>
-            <div class="content">
-              <div class="card-name">Scorpion</div>
-              <h3 class="card-description">
-                Undead ninja seeking revenge after being killed by Sub-Zero.
-              </h3>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="stats-container">
-        <div id="j1-stats" class="stats">
-          <h3>Jugador 1 (J1)</h3>
-          <p id="j1-name">Personaje:</p>
-          <p id="j1-hp">HP:</p>
-          <p id="j1-damage">Damage:</p>
-          <p id="j1-attack-speed">AS:</p>
-          <p id="j1-speed">Velocidad:</p>
-          <p id="j1-attack-range">Rango de ataque:</p>
-        </div>
-
-        <div id="j2-stats" class="stats">
-          <h3>Jugador 2 (J2)</h3>
-          <p id="j2-name">Personaje:</p>
-          <p id="j2-hp">HP:</p>
-          <p id="j2-damage">Damage:</p>
-          <p id="j2-attack-speed">AS:</p>
-          <p id="j2-speed">Velocidad:</p>
-          <p id="j2-attack-range">Rango de ataque:</p>
-        </div>
+      <div class="back-button-container">
+        <button id="backToSelectionBtn" class="back-btn">Seleccionar Personaje</button>
       </div>
 
-      <button id="start-battle-btn" class="hidden">Empezar Pelea</button>
+      <div class="health-bars-container">
+        <div class="player-info player1-info">
+          <div class="player-name" id="player1Name"></div>
+          <div class="health-bar-container">
+            <div class="health-bar">
+              <div class="health-fill" id="player1HealthBar"></div>
+            </div>
+            <div class="health-text" id="player1HealthText"></div>
+          </div>
+        </div>
+        <div class="player-info player2-info">
+          <div class="player-name" id="player2Name"></div>
+          <div class="health-bar-container">
+            <div class="health-bar">
+              <div class="health-fill" id="player2HealthBar"></div>
+            </div>
+            <div id="startGameContainer">
+              <button id="startGameBtn" class="start-btn">musica</button>
+            </div>
+            <div class="health-text" id="player2HealthText"></div>
+          </div>
+          
+        </div>
+      </div>
+      <canvas id="fightArena" width="1200" height="800"></canvas>
+    </div>
+    
+    <script src="js/game.js"></script>
 
-      <script src="js/main.js"></script>
-    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        gameMusic.play(); 
+      });
+    
+      document.getElementById("backToSelectionBtn").addEventListener("click", () => {
+        window.location.href = "index.html";
+      });
+    </script>
+    
   </body>
 </html>
