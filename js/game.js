@@ -288,7 +288,7 @@ function endGame() {
   const winner = character1.health > 0 ? character1.name : character2.name;
   setTimeout(() => {
     alert(`Game over! ${winner} wins!`);
-    window.location.href = "index.html";
+    window.location.href = "../index.html";
     gameMusic.stop();
   }, 500);
 
